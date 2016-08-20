@@ -11,6 +11,8 @@
 <h1>Home page</h1>
 <p>
 ${message}<br/>
+<p>
+${loginMessage}<br/>
 <a href="team/add.html">Add new team</a><br/>
 <a href="team/list.html">Team list</a><br/>
 </p>
