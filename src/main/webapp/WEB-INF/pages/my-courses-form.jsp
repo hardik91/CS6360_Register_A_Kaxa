@@ -1,3 +1,9 @@
+<%-- 
+    Document   : my-courses-form
+    Created on : Aug 20, 2016, 9:16:23 PM
+    Author     : Nishi
+--%>
+
 <?xml version="1.0" encoding="ISO-8859-1" ?>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1" pageEncoding="ISO-8859-1"%>
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
@@ -9,40 +15,29 @@
 <title>Home page</title>
         <link rel="stylesheet" type="text/css" href="${cp}/resources/css/homePage.css" />
 
+
 </head>
-<body>
-<div id="wrapper">
-	<div id="header">
-		<div id="logo">
-			<h1><a href="#">register-A-kaksha</a></h1>
-		</div>
-	</div>
-	<div id="menu">
-		<ul>
-			<li class="first current_page_item"><a href="#">Homepage</a></li>
-			<li><a href="${cp}/myCourses">My classes</a></li>
-			<li><a href="${cp}/registration">Register for courses</a></li>
-			<li><a href="#">Support</a></li>
-			<li><a href="#">About</a></li>
-			<li ><a href="#">Contact</a></li>
-                        <li class="last"> <a>Welcome, ${user_id}! </a></li>
-		</ul>
-		<br class="clearfix" />
-	</div>
-	<div id="splash">
-		<img class="pic" src="${cp}/resources/images/pic01.jpg" width="870" height="230" alt="" />
-	</div>
-	<div id="page">
-		<div id="content">
-			<div class="box">
-				<h2>Welcome to register-A-kaksha online course management page</h2>
-                                
-                                <div>
-                                    <p>Managing your classes has never been easier. Our user-friendly web-based administration system automatically controls your online class listings and registration pages. </p>
-                                </div>
-			</div>
-                    <div id="table">
-                        <table border="2">
+    <body>
+        <div id="wrapper">
+            <div id="header">
+                    <div id="logo">
+                            <h1><a href="#">register-A-kaksha</a></h1>
+                    </div>
+            </div>
+            <div id="menu">
+                    <ul>
+                            <li class="first current_page_item"><a href="${cp}">Homepage</a></li>
+                            <li><a href="${cp}/myCourses">My classes</a></li>
+                            <li><a href="${cp}/registration">Register for courses</a></li>
+                            <li><a href="#">Support</a></li>
+                            <li><a href="#">About</a></li>
+                            <li ><a href="#">Contact</a></li>
+                            <li class="last"> <a>Welcome, ${user_id}! </a></li>
+                    </ul>
+                    <br class="clearfix" />
+            </div>
+          <div id="table" >
+                        <table class="table">
                         <thead>
                             <tr>
                                 <th>Course Id</th>
@@ -138,10 +133,5 @@
                         </tbody>
                     </table>
                     </div>
-			
-						
-                </div>
-            
-        </div>
-</body>
+    </body>
 </html>
