@@ -5,6 +5,7 @@
  */
 package com.sprhib.controller;
 
+import com.sprhib.model.Student;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -19,6 +20,7 @@ public class RegistrationController {
         @RequestMapping(value="/studentRegistration", method=RequestMethod.GET)
 	public ModelAndView getRegistrationClass() {
             ModelAndView modelAndView = new ModelAndView("student-registration-form");
+            modelAndView.addObject("student", new Student());
             return modelAndView;
 	}
 }
