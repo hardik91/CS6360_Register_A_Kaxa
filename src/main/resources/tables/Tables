@@ -1,7 +1,6 @@
 Create table teams(id int AUTO_INCREMENT, name varchar(20), rating int,PRIMARY KEY (id));
 
 Create table student (
- student_id int Primary Key AUTO_INCREMENT ,
  first_name varchar(30) not null,
  last_name varchar(30) not null,
  gender varchar(1),
@@ -10,8 +9,9 @@ Create table student (
  dept_id int,
 email varchar(100),
 user_id varchar(20),
-password varchar(20)
-); 
+password varchar(20),
+PRIMARY KEY (user_id)
+);
 
 Create table login (
  user_name varchar(20) not null UNIQUE,

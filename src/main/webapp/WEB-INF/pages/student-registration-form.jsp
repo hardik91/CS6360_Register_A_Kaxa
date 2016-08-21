@@ -17,14 +17,6 @@ and open the template in the editor.
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" type="text/css" href="${cp}/resources/css/registration.css">
         <link rel="stylesheet" type="text/css" href="${cp}/resources/css/homePage.css" />
-            <link rel="stylesheet" href="//code.jquery.com/ui/1.12.0/themes/base/jquery-ui.css">
-  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-  <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.js"></script>
-  <script>
-  $( function() {
-    $( "#dob" ).datepicker();
-  } );
-  </script>
     </head>
     <body>
         <div id="wrapper">
@@ -61,7 +53,7 @@ and open the template in the editor.
             </div>
               <div>
                   <label for="dob">DOB</label>
-                  <form:input type="text" path="dob" placeholder="Date of Birth" />
+                  <form:input type="date" path="dob" placeholder="Date of Birth" />
                 </div>
                <div>
                    <label for="gender">Gender</label>
@@ -77,7 +69,7 @@ and open the template in the editor.
               
               <div>
               <label for="email">Email</label>
-              <form:input type="email" path="email_id" placeholder="Email Id"/>
+              <form:input type="email" path="email" placeholder="Email Id"/>
             </div>
               
             <div>
@@ -86,7 +78,7 @@ and open the template in the editor.
             </div>
             <div>
               <label for="password">Password</label>
-              <form:input type="password" path="password" />
+              <form:input type="password" path="password" placeholder="Password"/>
             </div>
           
             <div>

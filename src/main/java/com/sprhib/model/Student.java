@@ -5,11 +5,14 @@
  */
 package com.sprhib.model;
 
+import java.io.Serializable;
 import java.sql.Date;
+import java.util.UUID;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.PrePersist;
 import javax.persistence.Table;
 
 /**
@@ -18,12 +21,7 @@ import javax.persistence.Table;
  */
 @Entity
 @Table(name="student")
-public class Student {
-        @Id
-	@GeneratedValue
-        @Column(name = "stud_inst_id")
-	private Integer student_id;
-        
+public class Student implements Serializable { 
         @Column(name = "first_name")
 	private String first_name;
         
@@ -39,21 +37,23 @@ public class Student {
         @Column(name="address")
         private String address;
         
+        @Id
         @Column(name="user_id")
         private String user_id;
         
         @Column(name="email")
-        private String email_id;
+        private String email;
         
         @Column(name="password")
         private String password;
+        
 
-    public String getEmail_id() {
-        return email_id;
+    public String getEmail() {
+        return email;
     }
 
-    public void setEmail_id(String email_id) {
-        this.email_id = email_id;
+    public void setEmail(String email) {
+        this.email = email;
     }
 
     public String getPassword() {
@@ -72,13 +72,7 @@ public class Student {
         this.user_id = user_id;
     }
 
-    public Integer getStudent_id() {
-        return student_id;
-    }
-
-    public void setStudent_id(Integer student_id) {
-        this.student_id = student_id;
-    }
+   
 
     public String getFirst_name() {
         return first_name;
@@ -119,7 +113,8 @@ public class Student {
     public void setAddress(String address) {
         this.address = address;
     }
-        
+
+   
         
         
         

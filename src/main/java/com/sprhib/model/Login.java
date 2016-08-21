@@ -43,16 +43,6 @@ public class Login{
     @Column(name = "type")
     private String type;
     
-    @Column(name = "email")
-    private String email;
-
-    public String getEmail() {
-        return email;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
-    }
 
     public Integer getStud_inst_id() {
         return stud_inst_id;
