@@ -25,7 +25,8 @@
 			<li><a href="${cp}/registration">Register for courses</a></li>
 			<li><a href="#">Support</a></li>
 			<li><a href="#">About</a></li>
-			<li class="last"><a href="#">Contact</a></li>
+			<li ><a href="#">Contact</a></li>
+                        <li class="last"> <a>Welcome, ${user_id}! </a></li>
 		</ul>
 		<br class="clearfix" />
 	</div>
