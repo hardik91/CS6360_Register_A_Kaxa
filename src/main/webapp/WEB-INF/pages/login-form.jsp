@@ -12,14 +12,26 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
 <title>Login</title>
+        <link rel="stylesheet" type="text/css" href="${cp}/resources/css/homePage.css" />
         <link rel="stylesheet" type="text/css" href="${cp}/resources/css/login.css" />
 
 </head>
 <body>
-<h1>Add team page</h1>
-<p>Here you can add a new team.</p>
-<p>${errorMsg}</p>
-<form:form method="POST" commandName="login" action="${pageContext.request.contextPath}/authenticate">
+    <div id="wrapper">
+            <div id="header">
+                    <div id="logo">
+                            <h1><a href="#">register-A-kaksha</a></h1>
+                    </div>
+            </div>
+            <div id="menu">
+                    <ul>
+                            <li class="first current_page_item"><a href="${cp}/login">Login</a></li>
+                            <li><a href="${cp}/studentRegistration">Student Registration</a></li>
+                    </ul>
+                    <br class="clearfix" />
+            </div>
+       
+                  <form:form method="POST" commandName="login" action="${pageContext.request.contextPath}/authenticate">
   <fieldset class="account-info">
     <label>
       Username
@@ -33,6 +45,7 @@
   <fieldset class="account-action">
     <input class="btn" type="submit" name="submit" value="Login">
   </fieldset>
-</form:form>
+</form:form>   
+
 </body>
 </html>

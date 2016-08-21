@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="ISO-8859-1" ?>
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <c:set var="cp" value="${pageContext.request.servletContext.contextPath}" scope="request" />
 
@@ -14,13 +13,28 @@ and open the template in the editor.
         <title>Registration Page</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" type="text/css" href="/Register_A_Kaksha1/css/registration.css">
+        <link rel="stylesheet" type="text/css" href="${cp}/resources/css/registration.css">
+        <link rel="stylesheet" type="text/css" href="${cp}/resources/css/homePage.css" />
+
     </head>
     <body>
-        <div class="main">
+        <div id="wrapper">
+            <div id="header">
+                    <div id="logo">
+                            <h1><a href="#">register-A-kaksha</a></h1>
+                    </div>
+            </div>
+            <div id="menu">
+                    <ul>
+                            <li class="first current_page_item"><a href="${cp}/login">Login</a></li>
+                            <li><a href="${cp}/studentRegistration">Student Registration</a></li>
+                    </ul>
+                    <br class="clearfix" />
+            </div>
+                    <div class="main">
       <div class="one">
         <div class="register">
-          <h3>Student Registration Form</h3>
+         
           <form id="reg-form">
             <div>
               <label for="name">Name</label>
@@ -169,6 +183,8 @@ and open the template in the editor.
               <input type="submit" value="Create Account" id="create-account" class="button"/>
             </div>
           </form>
+        </div>              
+        
           
         </body>
 </html>
