@@ -36,7 +36,7 @@ and open the template in the editor.
       <div class="one">
         <div class="register">
          
-           <form:form method="POST" commandName="student" action="${pageContext.request.contextPath}/studentRegistration">
+           <form:form method="POST" commandName="student"  action="${pageContext.request.contextPath}/studentRegistration">
             
                <div style="visibility: hidden">
                    <label for="first_name">First Name</label>

@@ -1,8 +1,4 @@
-<%-- 
-    Document   : my-courses-form
-    Created on : Aug 20, 2016, 9:16:23 PM
-    Author     : Nishi
---%>
+
 
 <?xml version="1.0" encoding="ISO-8859-1" ?>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1" pageEncoding="ISO-8859-1"%>

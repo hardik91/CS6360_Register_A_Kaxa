@@ -1,5 +1,7 @@
-<?xml version="1.0" encoding="ISO-8859-1" ?>
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1" pageEncoding="ISO-8859-1"%>
+
+<%@page contentType="text/html" pageEncoding="windows-1252"%>
+<!DOCTYPE html>
+<%--<%@ page language="java" contentType="text/html; charset=ISO-8859-1" pageEncoding="ISO-8859-1"%> --%>
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <c:set var="cp" value="${pageContext.request.servletContext.contextPath}" scope="request" />
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
@@ -21,8 +23,8 @@
 	<div id="menu">
 		<ul>
 			<li class="first current_page_item"><a href="#">Homepage</a></li>
-			<li><a href="${cp}/login">Login</a></li>
-			<li><a href="${cp}/studentRegistration">Sign Up</a></li>
+			<li><a href="${cp}/myCourses">Login</a></li>
+			<li><a href="${cp}/student-registration-form">Sign Up</a></li>
 			<li><a href="#">Support</a></li>
 			<li><a href="#">About</a></li>
 			<li ><a href="#">Contact</a></li>
@@ -33,53 +35,10 @@
 	<div id="splash">
 		<img class="pic" src="${cp}/resources/images/pic01.jpg" width="870" height="230" alt="" />
 	</div>
-	
         <div id="page">
-		<div id="content">
-			<div class="box">
-				<h4>Welcome to Register-A-Kaksha online course management website</h4>
-				<p>
-					Managing your classes has never been easier. Our user-friendly web-based administration system automatically controls your online class listings and registration pages.
-                                </p>
-			</div>
-			<div class="box" id="content-box1">
-				<h3>Services</h3>
-				<ul class="section-list">
-					<li class="first">
-						<img class="pic alignleft" src="resources/images/pic06.jpg" width="70" height="70" alt="" />
-						<span>Student Registration </span>
-					</li>
-					<li>
-						<img class="pic alignleft" src="resources/images/pic07.jpg" width="70" height="70" alt="" />
-						<span>Adding classes</span>
-					</li>
-					<li class="last">
-						<img class="pic alignleft" src="resources/images/pic08.jpg" width="70" height="70" alt="" />
-						<span>Dropping classes</span>
-					</li>
-				</ul>
-			</div>
-			<div class="box" id="content-box2">
-				<h3>Our Programs</h3>
-				<p>
-					The University offers various types of programs. Find your perfect university program with our course guides ? covering entry requirements, specializations, career prospects and more. Click on the listings below to find out about available programs in your subject of interest.
-				</p>
-				<ul class="list">
-					<li class="first"><a href="#">Under graduate programs</a></li>
-					<li><a href="#">Online programs</a></li>
-					<li><a href="#">Research programs</a></li>
-
-					<li class="last"><a href="#">Post graduate programs</a></li>
-				</ul>
-			</div>
-			<br class="clearfix" />
-		</div>
-		
-		<br class="clearfix" />
-	</div>
-	<div id="page-bottom">
-		<div id="page-bottom-content">
-			<h3>ONLINE REGISTRATION MADE EASY!</h3>
+            
+            
+            <h3>ONLINE REGISTRATION MADE EASY!</h3>
 			<p>
                             
 The system is used by university of large size of students with different streams.  Register-A-Kaksha is perfect for Continuing Education, Professional Development, Professional Development, and Student Enrichment ? Online Registration Made Easy! It is ideally suited for face-to-face, online and hybrid class registration processes, and integrates with Learning Management Systems (LMS) such as Blackboard Learn, Haiku, and Canvas. Online Registration Made Easy!
@@ -94,6 +53,4 @@ Register-A-Kaksha ? Online Registration Made Easy!
 		</div>
 		
 		<br class="clearfix" />
-	</div>
-</div>
-<div id="footer">
+        </div>
