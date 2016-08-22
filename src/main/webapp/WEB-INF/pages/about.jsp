@@ -24,7 +24,7 @@
 		<ul>
 			<li class="first current_page_item"><a href="#">Homepage</a></li>
 			<li><a href="${cp}/myCourses">Login</a></li>
-			<li><a href="${cp}/student-registration-form">Sign Up</a></li>
+			<li><a href="${cp}/studentRegistration">Sign Up</a></li>
 			<li><a href="#">Support</a></li>
 			<li><a href="#">About</a></li>
 			<li ><a href="#">Contact</a></li>

@@ -24,9 +24,10 @@
 			<li><a href="${cp}/login">Login</a></li>
 			<li><a href="${cp}/studentRegistration">Sign Up</a></li>
 			<li><a href="#">Support</a></li>
-			<li><a href="#">About</a></li>
-			<li ><a href="#">Contact</a></li>
-                        
+			<li><a href="${cp}/about">About</a></li>
+			<li class="last"><a href="#">Contact</a></li>
+                         <li > <a>Welcome, ${user_id}! </a></li>
+
 		</ul>
 		<br class="clearfix" />
 	</div>
@@ -37,6 +38,7 @@
         <div id="page">
 		<div id="content">
 			<div class="box">
+                            
 				<h4>Welcome to Register-A-Kaksha online course management website</h4>
 				<p>
 					Managing your classes has never been easier. Our user-friendly web-based administration system automatically controls your online class listings and registration pages.

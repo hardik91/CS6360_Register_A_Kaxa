@@ -48,9 +48,9 @@ public class LoginController {
                 return modelAndView;
             }else{
                 ModelAndView modelAndView = new ModelAndView("home");
-                if(!model.containsAttribute("user_id")) {
-                        model.addAttribute("user_id",login.getUserName());
-                }
+               
+                model.addAttribute("user_id",login.getUserName());
+               
                 String message = "You've been logged in Succeffully";
                 modelAndView.addObject("loginMessage", message);
                 modelAndView.addObject("user_name", login.getUserName());

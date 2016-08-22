@@ -27,6 +27,8 @@
        
                   <form:form method="POST" commandName="login" action="${pageContext.request.contextPath}/authenticate">
   <fieldset class="account-info">
+      <p>${errorMsg}</p>
+
     <label>
       Username
       <form:input type="text" path="userName" />
