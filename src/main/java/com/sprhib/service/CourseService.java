@@ -17,4 +17,6 @@ public interface CourseService {
     List<Course> getCourseList();
     List<Course> registerCourse(RegisteredCourse course);
     List<Course> getMyCourses(String user_id);
+    public List<Course> dropClasses(String user_id, String course_id);
+
 }

@@ -37,4 +37,9 @@ public class CourseSeviceImpl implements CourseService {
         return courseDAO.getMyCourses(user_id);
     }
     
+    public List<Course> dropClasses(String user_id, String course_id){
+        return courseDAO.dropClasses(user_id, course_id);    
+    }
+
+    
 }

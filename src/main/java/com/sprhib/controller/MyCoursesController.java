@@ -73,7 +73,7 @@ public class MyCoursesController {
             RegisteredCourse course = new RegisteredCourse();
             course.setCourse_id(course_id);
             course.setUser_id(user_id);
-            List<Course> courses = courseService.registerCourse(course);
+            List<Course> courses = courseService.dropClasses(user_id, course_id);
             modelAndView.addObject("myCourses", courses);
             modelAndView.addObject("dropMsg","You have been Dropped from "+ course_id);
             return modelAndView;

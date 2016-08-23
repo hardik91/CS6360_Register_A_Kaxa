@@ -37,7 +37,6 @@ public class CourseDAOImpl implements CourseDAO {
         for (int i = 0; i < reg_courses.size(); i++) {
           List<Course> course =   getCurrentSession().createQuery("from  Course where course_id = :course_id_param")
          .setString("course_id_param", reg_courses.get(i).getCourse_id().toString()).list();
-          System.out.println(course.get(0));
             courses.add(course.get(0));
         }
         return courses;
@@ -52,5 +51,14 @@ public class CourseDAOImpl implements CourseDAO {
     public List<Course> registerCourse(RegisteredCourse course) {
         getCurrentSession().save(course);
         return getMyCourses(course.getUser_id());
+    }
+
+    @Override
+    public List<Course> dropClasses(String user_id, String course_id) {
+        RegisteredCourse reg_course = new RegisteredCourse();
+        reg_course.setCourse_id(course_id);
+        reg_course.setUser_id(user_id);
+        getCurrentSession().delete(reg_course);
+        return getMyCourses(user_id);
     }
 }

@@ -17,4 +17,5 @@ public interface CourseDAO {
     List<Course> getCourseList();
     public List<Course> registerCourse(RegisteredCourse course);
     public List<Course> getMyCourses(String user_id);
+    public List<Course> dropClasses(String user_id, String course_id);
 }

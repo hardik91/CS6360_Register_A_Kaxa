@@ -24,7 +24,7 @@
                            
                             <li><a href="${cp}/studentRegistration">Sign Up</a></li>
                              <c:if test="${user_id != null}">
-                                <li><a href="${cp}/myCourses">My Courses</a></li>
+                                <li><a href="${cp}/myCourses/${user_id}">My Courses</a></li>
                         </c:if>
                         <c:if test="${user_id != null}">
                                 <li><a href="${cp}/searchCourses">Search Courses</a></li>
