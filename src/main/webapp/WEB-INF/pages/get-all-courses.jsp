@@ -1,5 +1,3 @@
-
-
 <?xml version="1.0" encoding="ISO-8859-1" ?>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1" pageEncoding="ISO-8859-1"%>
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
@@ -22,28 +20,23 @@
             </div>
             <div id="menu">
                     <ul>
-                        <li class="first current_page_item"><a href="${cp}">Homepage</a></li>
-
-                        <li><a href="${cp}/studentRegistration">Sign Up</a></li>
-                         <c:if test="${user_id != null}">
-                            <li><a href="${cp}/myCourses/${user_id}"> My Courses </a></li>
+                            <li class="first current_page_item"><a href="${cp}">Homepage</a></li>
+                           
+                            <li><a href="${cp}/studentRegistration">Sign Up</a></li>
+                             <c:if test="${user_id != null}">
+                                <li><a href="${cp}/myCourses">My Courses</a></li>
                         </c:if>
                         <c:if test="${user_id != null}">
-                            <li>
-                                <a href="${cp}/searchCourses"> Search Courses </a>
-                            </li>
+                                <li><a href="${cp}/searchCourses">Search Courses</a></li>
                         </c:if>
-                        <li>
-                            <a href="${cp}/about">About</a>
-                        </li>
-                        <li class="last">
-                            <a> Welcome, ${user_id}! </a>
-                        </li>
+                            <li><a href="${cp}/about">About</a></li>
+                            
+                            <li class="last"> <a>Welcome, ${user_id}! </a></li>
                     </ul>
                     <br class="clearfix" />
             </div>
-           <div id="table" >
-               ${dropMsg}
+                            <p> ${errMsg} </p>
+                     <div id="table" >
                          <table class="table">
                         <thead>
                             <tr>
@@ -71,18 +64,19 @@
                                         <td>&nbsp;</td>         
                                         <td>&nbsp;</td>         
                                      </tr>
-                                  <c:forEach items="${myCourses}" var="course">
+                                  <c:forEach items="${courses}" var="course">
                                     <tr>
                                         <td>${course.course_id}</td>           
                                         <td>${course.course_name}</td>         
                                         <td>${course.dept_id}</td>         
                                         <td>${course.credits}</td>         
                                         <td>${course.inst_id}</td> 
-                                        <td><a href="${cp}/dropCourse/${user_id}/${course.course_id}">Drop</a></td>         
+                                        <td><a href="${cp}/registerCourse/${user_id}/${course.course_id}">Register</a></td>         
                                      </tr>
                                 </c:forEach>
                              </tbody>
                          </table>
                      </div>
+         
     </body>
 </html>
