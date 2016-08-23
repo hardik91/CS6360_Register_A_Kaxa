@@ -36,6 +36,14 @@ public class LoginController {
         return modelAndView;
     }
     
+    @RequestMapping(value="/logout", method=RequestMethod.GET)
+    public ModelAndView getLogOut(Model model) {
+        ModelAndView modelAndView = new ModelAndView("login-form");
+         model.addAttribute("user_id","");
+        modelAndView.addObject("login", new Login());
+        return modelAndView;
+    }
+    
         @RequestMapping(value="/authenticate", method=RequestMethod.POST)
 	public ModelAndView checkifUserExists(@ModelAttribute Login login, Model model) {
 		

@@ -69,7 +69,6 @@ public class MyCoursesController {
     @RequestMapping(value="/dropCourse/{user_id}/{course_id}", method=RequestMethod.GET)
     public ModelAndView dropCourse(@PathVariable String user_id, @PathVariable String course_id) {
         ModelAndView modelAndView = new ModelAndView("my-courses-form");
-        
             RegisteredCourse course = new RegisteredCourse();
             course.setCourse_id(course_id);
             course.setUser_id(user_id);

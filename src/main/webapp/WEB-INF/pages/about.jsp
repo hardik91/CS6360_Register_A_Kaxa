@@ -22,13 +22,24 @@
 	</div>
 	<div id="menu">
 		<ul>
-			<li class="first current_page_item"><a href="#">Homepage</a></li>
-			<li><a href="${cp}/myCourses">Login</a></li>
-			<li><a href="${cp}/studentRegistration">Sign Up</a></li>
-			<li><a href="#">Support</a></li>
-			<li><a href="#">About</a></li>
-			<li ><a href="#">Contact</a></li>
                         
+			<li class="first current_page_item"><a href="#">Homepage</a></li>
+			
+                        <c:if test="${user_id == null}">
+                            <li><a href="${cp}/login">Login</a></li>
+			<li><a href="${cp}/studentRegistration">Sign Up</a></li>
+                        </c:if>
+                        <c:if test="${user_id != null}">
+                            <li><a href="${cp}/myCourses/${user_id}">My Courses</a></li>
+
+                            <li><a href="${cp}/searchCourses">Search Courses</a></li>
+
+                            <li><a href="${cp}/about">About</a></li>
+                             <li><a href="${cp}/logout">Logout</a></li>
+                            <li > <a>Welcome, ${user_id}! </a></li> 
+                        </c:if>
+
+		</ul>
 		</ul>
 		<br class="clearfix" />
 	</div>
